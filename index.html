@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./styles.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap');
+            .poppins-bold {
+                font-family: "Poppins", sans-serif;
+                font-weight: 700;
+                font-style: normal;
+            }
+            .poppins-regular {
+                font-family: "Poppins", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+            }
+        </style>
+    </head> 
+    <body>
+        <div class="container">
+            <div >
+                <h1 class = "header_text poppins-bold">will you be my Valentine?</h1>
+                <h1 style="font-size: x-small;" class = "header_text poppins-regular">sorry for the delay bby</h1>
+            </div>
+            <div class="gif_container">
+                <img src="https://media.tenor.com/EAWAsRs49JEAAAAj/kawaii-budding-pop.gif" alt="Cute animated illustration">
+            </div>
+            <div class = "buttons">
+                <button class="btn poppins-regular" id = "yesButton" onclick="nextPage()">yes</button>
+                <button class="btn poppins-regular" id="noButton" onmouseover="moveButton()" onclick="moveButton()">no</button>
+                <script>
+                    function nextPage() {
+                        window.location.href = "yes.html";
+                    }
+                    
+                    function moveButton() {
+                        var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
+                        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
+                        document.getElementById('noButton').style.left = `${x}px`;
+                        document.getElementById('noButton').style.top = `${y}px`;
+                    }
+                </script> 
+            </div>
+        </div>
+       
+    </body> 
+</html>
